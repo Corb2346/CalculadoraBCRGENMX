@@ -1,4 +1,6 @@
-
+body{
+    background-image: url(/assets/images/background.jpg);
+}
 
 .main{
     /* border: 4px solid black; */
