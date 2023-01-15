@@ -20,7 +20,7 @@
                 <div class="row  ">
 
                     <div class="row-sm-12 gy-2  ">
-                    <div class="container-sm display ">000000000000</div>
+                    <div class="container-sm display " id="display">0.00</div>
                 </div>
                     <!-- buttons container -->
                     <div class="container-sm- gy-2 ">
@@ -29,40 +29,40 @@
                             <div class="row  row-cols-sm-3 gy-2 ">
 
                                 <div class="col"> <!-- ver como espaciar los grids horizontales -->
-                                    <button type="button" class="btn btn-light">1 </button>
+                                    <button type="button" class="btn btn-light " onclick="setToDisplay('1')">1 </button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">2</button>
+                                    <button type="button" class="btn btn-light " onclick="setToDisplay('2')">2</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">3</button>
+                                    <button type="button" class="btn btn-light " onclick="setToDisplay('3')">3</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">4</button>
+                                    <button type="button" class="btn btn-light " onclick="setToDisplay('4')">4</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">5</button>
+                                    <button type="button" class="btn btn-light " onclick="setToDisplay('5')">5</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">6</button>
+                                    <button type="button" class="btn btn-light " onclick="setToDisplay('6')">6</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">7</button>
+                                    <button type="button" class="btn btn-light " onclick="setToDisplay('7')">7</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">8</button>
+                                    <button type="button" class="btn btn-light " onclick="setToDisplay('8')">8</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">9</button>
+                                    <button type="button" class="btn btn-light  " onclick="setToDisplay('9')">9</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">=</button>
+                                    <button type="button" class="btn btn-light  " onclick="operate()">=</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">.</button>
+                                    <button type="button" class="btn btn-light  " onclick="setToDisplay('.')">.</button>
                                 </div>
                                 <div class="col">
-                                    <button type="button" class="btn btn-light">0</button>
+                                    <button type="button" class="btn btn-light  " onclick="setToDisplay('0')">0</button>
                                 </div>
 
                             </div>
@@ -83,19 +83,19 @@
                         <div class="row row-cols-xl-1 row-cols-md-1 row-cols-sm-4 justify-content-sm-center gy-2">
 
                             <div class="col ">
-                                <button type="button" class="btn btn-light">Clear</button>
+                                <button type="button" class="btn btn-light" onclick="clearDisplay()">Clear</button>
                             </div>
                             <div class="col">
-                                <button type="button" class="btn btn-light">+</button>
+                                <button type="button" class="btn btn-light" onclick="getOperation('+')">+</button>
                             </div>
                             <div class="col">
-                                <button type="button" class="btn btn-light">-</button>
+                                <button type="button" class="btn btn-light" onclick="getOperation('-')">-</button>
                             </div>
                             <div class="col">
-                                <button type="button" class="btn btn-light">x</button>
+                                <button type="button" class="btn btn-light" onclick="getOperation('*')">x</button>
                             </div>
                             <div class="col">
-                                <button type="button" class="btn btn-light">/</button>
+                                <button type="button" class="btn btn-light" onclick="getOperation('/')">/</button>
                             </div>
                         </div>
                     </div>
