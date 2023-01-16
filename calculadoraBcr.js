@@ -1,9 +1,9 @@
 
 let number1;
 let operator;
+let secondOperator;
 let number2;
 let result;
-let operationStatus;
 
 const display = () => document.getElementById("display");
 
@@ -24,26 +24,24 @@ function setToDisplay(digit) {
 
 }
 
-function readNumber() {
-  
+const redNumberFromDisplay = () => {
     let number = display().innerText;
     return number;
 }
 
 function getOperation(operation) {
     operator = operation;
-    number1 = readNumber();
+    number1 = redNumberFromDisplay();
     console.log("numero guardado: "+number1);
     console.log("operacion recibida" + operation);
     console.log("operacrion en variable operator: "+operator);
     display().innerText = operation;
     
- 
 }
 
 function operate() {
     
-     number2 = readNumber();
+     number2 = redNumberFromDisplay();
      console.log("operacion recuperada en operator: " + operator);
      console.log(typeof(operator));
      console.log("numero guardado: " + number2);
@@ -84,21 +82,13 @@ function operate() {
     }
   }
 
-function add(a, b) {
-    return a + b
-}
+const add = (a, b) => a +b ;
 
-function substract(a, b) {
-    return a - b
-}
+const substract = (a, b) => a -b;
 
-function multiply(a, b) {
-    return a * b
-}
+const multiply = (a, b) => a * b
 
-function divide(a, b) {
-    return a / b
-}
+const divide = (a, b) => a / b ;
 
 
 
