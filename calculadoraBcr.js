@@ -1,4 +1,4 @@
-const inputNumbers = [];
+
 let number1;
 let operator;
 let number2;
@@ -6,7 +6,6 @@ let result;
 let operationStatus;
 
 const display = () => document.getElementById("display");
-console.log(display);
 
 function clearDisplay() {
     display().innerText = "0.00";
