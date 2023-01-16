@@ -13,10 +13,27 @@ function clearDisplay() {
     display().innerText = "0.00"
 }
 
+/* if(choice === '.' && !display.textContent.includes('.')){ //cuando ya no es sero 
+  display.textContent += choice; //concatena los numeros presionados 
+  number1 = display.textContent;
+  }  else if(choice !== '.'){
+       display.textContent += choice; //concatena los numeros presionados 
+       number1 = display.textContent;
+  } */
 function setToDisplay(digit) {
   
+   /* if(display().innerHTML.length < 25 || digit != '.'){
+        display().innerText == "0.00" || display().innerText == "+" || display().innerText == "-" 
+    ||  display().innerText == "*" || display().innerText == "/" ? display().innerText = digit : display().innerText += digit;
+   } else if(digit == '.' && display().innerText.includes('.')){
+    null
+   } */
+
+    
    if(display().innerHTML.length < 25)
-  display().innerText == "0.00" || display().innerText == "+" || display().innerText == "-" || display().innerText == "*" || display().innerText == "/" ? display().innerText = digit : display().innerText += digit;
+    display().innerText == "0.00" || display().innerText == "+" || display().innerText == "-" 
+  ||  display().innerText == "*" || display().innerText == "/"  ? display().innerText = digit : digit!='.'||! display().innerText.includes('.') ? display().innerText += digit :null ;
+
   console.log(digit);
 }
 
@@ -25,19 +42,6 @@ function readNumber() {
     let number = display().innerText;
     return number;
 }
-
-/* 
-function readNumber2(){
-    let number2 = display().innerText;
-    console.log(number2);
-}
- */
-/* function setOperation(operation){
-    readNumber();
-    display().innerText = operation; 
-    
-    
-} */
 
 function getOperation(operation) {
     operator = operation;
@@ -65,17 +69,17 @@ function operate() {
       case '+':
         console.log("la suma es: " + add(a, b));
         result= add(a, b);
-        display().innerText = Number(result).toFixed(4);
+        display().innerText = result;
         return add(a, b)
       case '-':
         console.log("la resta es: " + substract(a, b));
         result= substract(a, b);
-        display().innerText = Number(result).toFixed(4);
+        display().innerText = result;
         return substract(a, b)
       case '*':
-        console.log("la mulstiplicacion es: " + multiply(a, b));
+        console.log("la multiplicacion es: " + multiply(a, b));
         result=  multiply(a, b);
-        display().innerText = Number(result).toFixed(4);
+        display().innerText = result;
         return multiply(a, b)
       case '/':
         if (b === 0) {
@@ -83,7 +87,7 @@ function operate() {
         return null
         } else {
           result= divide(a, b);
-          display().innerText =  Number(result).toFixed(4);
+          display().innerText =  result;
           return divide(a, b)
           }
       default:
@@ -108,6 +112,8 @@ function multiply(a, b) {
 function divide(a, b) {
     return a / b
 }
+
+
 
 
 
