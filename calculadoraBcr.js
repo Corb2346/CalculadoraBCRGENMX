@@ -18,7 +18,7 @@ function clearDisplay() {
 
 function setToDisplay(digit) {
   
-   if(display().innerHTML.length < 25)
+   if(display().innerHTML.length < 24)
   display().innerText == "0.00" || display().innerText == "+" || display().innerText == "-" 
   ||  display().innerText == "*" || display().innerText == "/"  ? display().innerText = digit : digit!='.'||
   !display().innerText.includes('.') ? display().innerText += digit :null ;
@@ -84,7 +84,6 @@ function operate() {
         return null
     }
   }
-
 
 function add(a, b) {
     return a + b
