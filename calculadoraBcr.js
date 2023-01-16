@@ -9,32 +9,20 @@ const display = () => document.getElementById("display");
 console.log(display);
 
 function clearDisplay() {
-    console.log("Borra el contenido de la pantalla");
-    display().innerText = "0.00"
+    display().innerText = "0.00";
+    number1=0;
+    number2=0;
+    operator="";
+    result=0;
 }
 
-/* if(choice === '.' && !display.textContent.includes('.')){ //cuando ya no es sero 
-  display.textContent += choice; //concatena los numeros presionados 
-  number1 = display.textContent;
-  }  else if(choice !== '.'){
-       display.textContent += choice; //concatena los numeros presionados 
-       number1 = display.textContent;
-  } */
 function setToDisplay(digit) {
   
-   /* if(display().innerHTML.length < 25 || digit != '.'){
-        display().innerText == "0.00" || display().innerText == "+" || display().innerText == "-" 
-    ||  display().innerText == "*" || display().innerText == "/" ? display().innerText = digit : display().innerText += digit;
-   } else if(digit == '.' && display().innerText.includes('.')){
-    null
-   } */
-
-    
    if(display().innerHTML.length < 25)
-    display().innerText == "0.00" || display().innerText == "+" || display().innerText == "-" 
-  ||  display().innerText == "*" || display().innerText == "/"  ? display().innerText = digit : digit!='.'||! display().innerText.includes('.') ? display().innerText += digit :null ;
+  display().innerText == "0.00" || display().innerText == "+" || display().innerText == "-" 
+  ||  display().innerText == "*" || display().innerText == "/"  ? display().innerText = digit : digit!='.'||
+  !display().innerText.includes('.') ? display().innerText += digit :null ;
 
-  console.log(digit);
 }
 
 function readNumber() {
@@ -51,6 +39,7 @@ function getOperation(operation) {
     console.log("operacrion en variable operator: "+operator);
     display().innerText = operation;
     
+ 
 }
 
 function operate() {
